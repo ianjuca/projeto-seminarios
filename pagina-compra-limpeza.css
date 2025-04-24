@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    height: 90vh;
+    padding: 20px;
+}
+
+header {
+    color: #79b91a;
+    padding: 20px;
+    width: 250px;
+}
+
+header > h1 {
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+button#Voltar {
+    position: relative;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    padding: 1px;
+}
+
+button#Voltar:hover {
+    transform: scale(1.1);
+}
+
+section#comercios {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #f0f0f0;
+}
+
+div#comercio7 {
+    background-color: #79b91a;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+div#comercio7:hover {
+    opacity: 0.7;
+}
+
+div#comercio8 {
+    background-color: #79b91a;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+div#comercio8:hover {
+    opacity: 0.7;
+}
+
+div#comercio9 {
+    background-color: #79b91a;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+div#comercio9:hover {
+    opacity: 0.7;
+}

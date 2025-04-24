@@ -9,23 +9,22 @@
 <body>
     <main>
         <header>
-            <button id="Voltar" onclick="clickVoltar()">Voltar</button>
-            <button id="Login">Login</button>
+            <div class="top-buttons">
+                <button class="top-button" onclick="clickVoltar()">
+                    🔙 Voltar
+                </button>
+                <button class="top-button" onclick="clickLogin()">
+                    🔐 Login
+                </button>
+            </div>
             <h1>Nome do comércio</h1>           
         </header>
-        <section id="adicionar">
-            <h2>ADICIONAR</h2>
-            <section id="categorias">
-                <div id="comida">
-                    <h3>ALIMENTAÇÃO</h3>
-                </div>
-                <div id="bebida">
-                    <h3>BEBIDAS</h3>
-                </div>
-                <div id="limpeza">
-                    <h3>LIMPEZA</h3>
-                </div>
-            </section>
+        <section id="menu">
+            <button onclick="window.location.href='pagina-adicionar.html'">ADICIONAR PRODUTO</button>
+            <button onclick="abrirCategoria('alimentacao')">ALIMENTAÇÃO</button>
+            <button onclick="abrirCategoria('bebidas')">BEBIDAS</button>
+            <button onclick="abrirCategoria('limpeza')">LIMPEZA</button>
+        </section>
         </section>
     </main>
     <script src="index.js"></script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="pagina-venda.css">
+</head>
+<body>
+    <main>
+        <h2 id="titulo-categoria">Produtos</h2>
+        <div id="lista-produtos"></div>
+        <button onclick="window.location.href='pagina-venda.html'">Voltar</button>
+    </main>
+
+    <script src="index.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoria = urlParams.get('cat');
+        document.getElementById('titulo-categoria').innerText = `Produtos de ${categoria.toUpperCase()}`;
+        mostrarProdutos(categoria);
+    </script>
+</body>
+</html>

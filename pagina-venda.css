@@ -1,128 +1,147 @@
 @charset "UTF-8";
 
+/* Reset e base */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
+
 body {
-    height: 100vh;
     background-color: #f0f0f0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    height: 90vh;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
-header {
+/* Título */
+main h1 {
     color: #79b91a;
-    padding: 20px;
-    width: 250px;
+    margin-bottom: 25px;
+    font-size: 24px;
 }
 
-header > h1 {
-    padding: 20px;
-    text-align: center;
-    margin-top: 30px;
+/* Inputs e selects */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
 }
 
-button#Voltar {
-    position: relative;
-    right: 20px;
-    bottom: 10px;
+input:focus, select:focus {
+    border-color: #79b91a;
+    outline: none;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #79b91a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
-    transition: transform 0.2s ease;
-    padding: 1px;
 }
 
-button#Voltar:hover {
-    transform: scale(1.1);
+button:hover {
+    background-color: #68a317;
+    transform: scale(1.02);
 }
 
-button#Login {
-    position: relative;
-    left: 125px;
-    bottom: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    padding: 1px;
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #79b91a;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px);
+    z-index: 1000;
 }
 
-button#Login:hover {
-    transform: scale(1.1);
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-section#adicionar {
+.toast.hidden {
+    display: none;
+}
+
+/* Separador */
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.top-button {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    color: #f0f0f0;
-}
-
-section#adicionar > h2 {
-    background-color: #79b91a;
-    width: 250px;
-    height: 50px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #ffffff;
+    border: 2px solid #79b91a;
+    color: #79b91a;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
     cursor: pointer;
+    font-size: 14px;
 }
 
-section#adicionar > h2:hover {
-    opacity: 0.7;
+.top-button:hover {
+    background-color: #79b91a;
+    color: white;
+    transform: scale(1.05);
 }
 
-section#categorias {
+/* Container de botões */
+.top-buttons {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-div#comida {
-    background-color: #79b91a;
-    width: 250px;
-    height: 50px;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-}
+/* Responsividade */
+@media (max-width: 600px) {
+    main {
+        padding: 25px 15px;
+    }
 
-div#comida:hover {
-    opacity: 0.7;
+    .toast {
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        text-align: center;
+    }
 }
-
-div#bebida {
-    background-color: #79b91a;
-    width: 250px;
-    height: 50px;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-div#bebida:hover {
-    opacity: 0.7;
-}
-
-div#limpeza {
-    background-color: #79b91a;
-    width: 250px;
-    height: 50px;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-div#limpeza:hover {
-    opacity: 0.7;
-}
-

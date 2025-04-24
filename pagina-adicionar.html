@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Produto</title>
+    <link rel="stylesheet" href="pagina-venda.css">
+</head>
+<body>
+    <main>
+        <h2>Adicionar Produto</h2>
+        <form onsubmit="adicionarProduto(event)">
+            <input type="text" id="nome" placeholder="Nome do produto" required>
+            <input type="number" id="preco" placeholder="Preço" required>
+            <select id="categoria" required>
+                <option value="">Selecione a categoria</option>
+                <option value="alimentacao">Alimentação</option>
+                <option value="bebidas">Bebidas</option>
+                <option value="limpeza">Limpeza</option>
+            </select>
+            <button type="submit">Salvar</button>
+        </form>
+        <button onclick="window.location.href='pagina-venda.html'">Voltar</button>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

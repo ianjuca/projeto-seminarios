@@ -10,19 +10,13 @@
     <main>
         <header>
             <button id="Voltar" onclick="clickVoltar()">Voltar</button>
-            <h1>CompraAi</h1>
+            <h1>Lista de Categorias</h1>
         </header>
+    
         <section id="categorias">
-            <h2>CATEGORIAS</h2>
-            <div id="comida" onclick="clickComida()">
-                <h3>ALIMENTAÇÃO</h3>
-            </div>
-            <div id="bebida" onclick="clickBebida()">
-                <h3>BEBIDAS</h3>
-            </div>
-            <div id="limpeza" onclick="clickLimpeza()">
-                <h3>LIMPEZA</h3>
-            </div>
+            <div id="comida" class="categoria-btn" onclick="clickComida()">Comida</div>
+            <div id="bebida" class="categoria-btn" onclick="clickBebida()">Bebida</div>
+            <div id="limpeza" class="categoria-btn" onclick="clickLimpeza()">Limpeza</div>
         </section>
     </main>
     <script src="index.js"></script>
